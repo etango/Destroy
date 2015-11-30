@@ -25,4 +25,6 @@ sudo apt-get remove -y php5 php5-imagick
 
 cd /
 sudo rm -f /var/www/html/*
-
+sudo rm -f /tmp/movevendor.txt
+sudo rm -f /tmp/database-setup.txt
+sudo rm -f /tmp/hello.txt
