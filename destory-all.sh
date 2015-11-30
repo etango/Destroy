@@ -1,16 +1,15 @@
 #!/bin/bash
 
-aws ec2-terminate-instances ami-d05e75b8
+
+mysql -u root -p
+DROP DATABASE et-db
+/q
+rds-delete-db-instance databaseInstance1 --final-db-snapshot-identifier myfinalsnapshot
+aws autoscaling suspend-processes --auto-scaling-group-name et-itmo-444-extended-auto-scaling-group-2
+aws autoscaling delete-launch-configuration --launch-configuration-name et-itmo-444-launch-config
 aws elb delete-load-balancer --load-balancer-name itmo-444-et-lb
+aws ec2-terminate-instances ami-d05e75b8
 
-
-
-
-# remove cloud watch metris
-# remove autoscaling group
-# Remove RDS instance
-# delete Mysql DB
-# remove stuff from application setup
 
 
 sudo apt-get remove -y apache2
