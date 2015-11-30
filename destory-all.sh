@@ -23,6 +23,6 @@ sudo apt-get remove -y php5-mysql
 sudo apt-get remove -y php5 php5-imagick
 
 
+cd /
+sudo rm -f /var/www/html/*
 
-
-#remove html
